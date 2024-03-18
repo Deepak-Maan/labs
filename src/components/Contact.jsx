@@ -2,8 +2,6 @@ import { useState } from "react";
 import ft_logo from "../assets/images/svg/page-logo.svg";
 import { Facebook, Instagram, Linkedin, Twitter } from "./Icons";
 
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
