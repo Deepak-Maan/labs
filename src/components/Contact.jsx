@@ -1,163 +1,181 @@
-import { useState } from "react";
-import ft_logo from "../assets/images/svg/page-logo.svg";
-import { Facebook, Instagram, Linkedin, Twitter } from "./Icons";
+import React, { useRef, useState } from 'react'
 
-const Contact = () => {
-    const [formData, setFormData] = useState({
+const Contactus = () => {
+    const checkboxRef = useRef(null);
+    const [Fromdata, setFromdata] = useState({
         name: "",
-        name2: "",
+        lastname: "",
         number: "",
-        mail: "",
+        email: "",
     });
-    const [formErrors, setFormErrors] = useState({
+    const [Errordata, setErrordata] = useState({
         name: "",
-        name2: "",
+        lastname: "",
         number: "",
-        mail: "",
+        email: "",
     });
-    const [formMail, setFormMail] = useState({
-        name: "",
-        name2: "",
-        number: "",
-        mail: "",
-    });
-
-    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-
-    const handleChange = (e) => {
+    const [modal, setmodal] = useState(false);
+    const submission = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+        setFromdata({ ...Fromdata, [name]: value });
     };
-
-    const handleSubmit = (e) => {
+    const handelsubmit = (e) => {
         e.preventDefault();
         const regex = {
             name: /^[a-zA-Z\s]+$/,
-            name2: /^[a-zA-Z\s]+$/,
+            lastname: /^[a-zA-Z\s]+$/,
             number: /^\d{10}$/,
-            mail: /^[a-zA-Z\s]/,
+            email: /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/,
         };
-        const errors = {};
-        if (!regex.name.test(formData.name)) {
-            errors.name = "Name is invalid.";
+        const error = {};
+        if (!regex.name.test(Fromdata.name)) {
+            error.name = "invalid name";
         }
-        if (!regex.name2.test(formData.name2)) {
-            errors.name2 = "Name is invalid.";
+        if (!regex.lastname.test(Fromdata.lastname)) {
+            error.lastname = "invalid lastname";
         }
-        if (!regex.number.test(formData.number)) {
-            errors.number = "Number is invalid.";
+        if (!regex.number.test(Fromdata.number)) {
+            error.number = "invalid number";
         }
-        if (!regex.mail.test(formData.mail)) {
-            errors.mail = "Mail is invalid.";
+        if (!regex.email.test(Fromdata.email)) {
+            error.email = "invalid email";
         }
+        if (!checkboxRef.current.checked) {
+            error.checkbox = "agreement not checked";
+        }
+        setErrordata(error);
+        if (Object.keys(error).length === 0) {
+            setmodal(true);
+            setErrordata({
+                name: "",
+                lastname: "",
+                number: "",
+                email: "",
+            })
+            setFromdata({
+                name: "",
+                lastname: "",
+                number: "",
+                email: "",
+            })
+            console.log(Fromdata)
 
-        setFormErrors(errors);
-        if (Object.keys(errors).length === 0) {
-            setShowSuccessPopup(true);
         }
     };
-
-    const handlePopupClose = () => {
-        setShowSuccessPopup(false);
-        setFormData({
-            name: "",
-            name2: "",
-            number: "",
-            mail: "",
-        });
-        setFormErrors({
-            name: "",
-            name2: "",
-            number: "",
-            mail: "",
-        });
-    };
-
+    if (modal) {
+        document.body.classList.add('overflow-hidden')
+    }
+    else {
+        document.body.classList.remove('overflow-hidden')
+    }
     return (
-        <div>
-            <div className="form_bg d-flex min-vh-100 mt_2">
-                <div className="container d-flex flex-column justify-content-center align-items-center">
-                    <div className="row flex-grow-md-1 align-items-center justify-content-center">
-                        <div className="col-lg-8 col-12">
-                            <form className="registration-form " onSubmit={handleSubmit}>
-                                <h1 className="text-center pb-2 mb-3 fs-xl1 fw-bold text-white">Get updated with us</h1>
-                                <div className="d-md-flex pb-2 gap-4 text-white justify-content-between">
-                                    <div className="form-group max-w-310">
-                                        <label className="fw-medium text-white " htmlFor="name">First Name:</label>
-                                        <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} />
-                                        {formErrors.name && (<p className="error-message">{formErrors.name}</p>)}
+        <div className='form-bg ' id="aboutus">
+            <div className='container'>
+                <div className=' align-items-center row'>
+                    <div className=' col-12 col-lg-7'>
+                        <div className=' foam_box' data-aos="zoom-in">
+                            <p className=' fw-bold fs-1lg lh62 text-white mb-sm-4 mb-3'>Get updated with us</p>
+                            <form onSubmit={handelsubmit}>
+                                <div className="d-flex flex-column flex-sm-row align-items-center gap-sm-4 gap-2">
+                                    <div className=" d-flex flex-column w-100">
+                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white ">
+                                            Frist Name
+                                        </label>
+                                        <div className="gradia ntfrom">
+                                            <input
+                                                onChange={submission}
+                                                type="name"
+                                                name="name"
+                                                value={Fromdata.name}
+                                                placeholder="Park Seijun"
+                                                className=" input-box text-white opacity-70 w-100  gradient-border-FOCUS "
+                                            />
+                                            {Errordata.name && (
+                                                <p className="text-danger pt-1">{Errordata.name}</p>
+                                            )}
+                                        </div>
                                     </div>
-                                    <div className="form-group max-w-310">
-                                        <label className="fw-medium text-white" htmlFor="name2">Last Name:</label>
-                                        <input type="text" id="name2" name="name2" value={formData.name2} onChange={handleChange} />
-                                        {formErrors.name2 && (<p className="error-message">{formErrors.name2}</p>)}
+                                    <div className=" d-flex flex-column w-100">
+                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white  ">
+                                            Last Name
+                                        </label>
+                                        <div className="gradia ntfrom">
+                                            <input
+                                                onChange={submission}
+                                                type="name"
+                                                name="lastname"
+                                                value={Fromdata.lastname}
+                                                placeholder="Sejiun"
+                                                className=" input-box text-white opacity-70  w-100 gradient-border-FOCUS  "
+                                            />
+                                            {Errordata.lastname && (
+                                                <p className="text-danger pt-1">
+                                                    {Errordata.lastname}
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="d-md-flex pb-2 gap-4 justify-content-between">
-                                    <div className="form-group max-w-310">
-                                        <label className="fw-medium text-white" htmlFor="number">Phone Number:</label>
-                                        <input type="text" id="number" name="number" value={formData.number} onChange={handleChange} className={formErrors.number ? "error" : ""} />
-                                        {formErrors.number && (<p className="error-message">{formErrors.number}</p>)}
+                                <div className="d-flex flex-column flex-sm-row align-items-center gap-sm-4 pt-sm-4 gap-2 pt-2">
+                                    <div className=" d-flex flex-column w-100">
+                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white ">Phone Number</label>
+                                        <div className="gradia ntfrom">
+                                            <input onChange={submission} type="number" name="number" value={Fromdata.number} placeholder="+12 5858526478" className=" input-box text-white opacity-70 w-100  gradient-border-FOCUS  " />
+                                            {Errordata.number && (<p className="text-danger pt-1">{Errordata.number}</p>)}
+                                        </div>
                                     </div>
-                                    <div className="form-group max-w-310">
-                                        <label className="fw-medium text-white " htmlFor="mail" >Email:</label>
-                                        <input type="mail" id="mail" name="mail" value={formData.mail} onChange={handleChange} />
-                                        {formErrors.mail && (<p className="error-message">{formErrors.mail}</p>)}
+                                    <div className=" d-flex flex-column w-100">
+                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white  ">
+                                            Email
+                                        </label>
+                                        <div className="gradia ntfrom">
+                                            <input
+                                                onChange={submission}
+                                                type="email"
+                                                name="email"
+                                                value={Fromdata.email}
+                                                placeholder="Park@458@Gmail.com"
+                                                className=" input-box text-white opacity-70 w-100 gradient-border-FOCUS   "
+                                            />
+                                            {Errordata.email && (
+                                                <p className="text-danger pt-1">{Errordata.email}</p>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
-                                <button type="submit" className="bg-button fw-medium  text-white rounded-pill px-32 py-3 border-0 fs-sm fw-medium" > Subscribe</button>
+                                <div className=" mb-2 d-flex pt-3 align-items-start gap-3">
+                                    <input type="checkbox" id="checkbox" defaultChecked={false} ref={checkboxRef} className='mt-1' />
+                                    <p className=" text-white fw-normal max-w-547 fs-2sm lh-21 mb-0 " >By sending this form I confirm that I have read and acceptthe <span className=" fw-semibold"> Privacy Policy</span></p>
+                                </div>
+                                {Errordata.checkbox && (
+                                    <p className="text-danger pt-1">{Errordata.checkbox}</p>
+                                )}
+                                <div className="button-border  d-inline-block mt-4">
+                                    <button className="px-32 py-3 border-0 bg-button rounded-pill fs-2sm fw-medium text-white lh-18">Subscribe</button>
+                                </div>
                             </form>
-                            {showSuccessPopup && (
-                                <div className="success-popup">
-                                    <p className="fw-bold">Form submitted successfully!</p>
-                                    <button onClick={handlePopupClose}>Close</button>
-                                </div>
-                            )}
                         </div>
-                        <div className="col-lg-4 col-12">
-                            <p className="fs-lg1 fw-normal text-white mb-2 pb-1">Stay updated</p>
-                            <p className="fs-sm fw-normal text-gray  mb-4"> At 248 Labs, our constant pursuit is to build engaging games that spared joy. Don’t hesitate to reach out to us with your thoughts and messages - we are all ears!</p>
-                            <p className="fs-lg1 fw-normal text-white mb-2 pb-1"> Address</p>
-                            <p className="fs-sm fw-normal text-gray">390 Orchard Road, 03-07, Palais Renaissance.</p>
+                    </div>
+                    <div className=' col-lg-4 col-12 mt-4 mt-lg-0'>
+                        <div className=' max-w-374 mx-auto'>
+                            <p className=' fw-normal fs-md lh28 text-white mb-0 text-center text-lg-start' data-aos="zoom-in">Stay updated</p>
+                            <p className=' fw-normal fs-1sm lh24 text-white mt-12 mb-4 opacity-70 text-center text-lg-start' data-aos="zoom-in">At 248 Labs, our constant pursuit is to build engaging games that spared joy. Don’t hesitate to reach out to us with your thoughts and messages - we are all ears!</p>
+                            <p className=' fw-normal fs-md lh28 text-white mt-12  mb-0 text-center text-lg-start' data-aos="zoom-in">Address</p>
+                            <p className=' fw-normal fs-1sm lh24 text-white mt-12  mb-0 opacity-70 text-center text-lg-start' data-aos="zoom-in">390 Orchard Road, 03-07, Palais Renaissance.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="bg-black mt_2">
-                <div className="container">
-                    <div className="d-flex flex-column justify-content-center align-items-center">
-                        <img className="ft_logo" src={ft_logo} alt="logo" />
-                        <ul className="gap-4 ps-0 d-flex align-items-center justify-content-center mt-3 mb-4">
-                            <li><a href="#home" className="fs-sm fw-normal text-gray">Home</a></li>
-                            <li><a href="#roadmap" className="fs-sm fw-normal text-gray">Roadmap</a></li>
-                            <li><a href="#team" className="fs-sm fw-normal text-gray">Team</a></li>
-                            <li><a href="#about" className="fs-sm fw-normal text-gray" >About Us</a></li>
-                        </ul>
-                        <div className="gap-3 d-flex align-items-center justify-content-center pb-5">
-                            <a className="app_hover" href="https://twitter.com/?lang=en" target="_blank" rel='noreferrer'>
-                                <Twitter />
-                            </a>
-                            <a className="app_hover" href="https://www.facebook.com/" target="_blank" rel='noreferrer'>
-                                <Facebook />
-                            </a>
-                            <a className="app_hover" href="https://www.instagram.com/" target="_blank" rel='noreferrer'>
-                                <Instagram />
-                            </a>
-                            <a className="app_hover" href="https://www.linkedin.com/feed/" target="_blank" rel='noreferrer'>
-                                <Linkedin />
-                            </a>
-                        </div>
-                    </div>
+            {modal && <div className=' h-100 w-100 position-fixed top-0 start-0 d-flex justify-content-center align-items-center z-11  p-4' onClick={() => setmodal(false)}>
+                <div className=' submit-box w-100 h-100 d-flex justify-content-center align-items-center position-relative' >
+                    <span className=' position-absolute modal-close ' onClick={() => setmodal(false)}><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="#FFFFFF" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg></span>
+                    <p className=' text-white fs-md text-center ' >THANKS FOR SUBSCRIBE</p>
                 </div>
-                <hr className="w-100  bg-white" />
-                <p className="fs-xs fw-normal  text-gray text-center py-3 mb-0"> © 2024 248 Labs. All rights reserved
-                </p>
-            </div>
+            </div>}
         </div>
-    );
-};
+    )
+}
 
-export default Contact;
+export default Contactus

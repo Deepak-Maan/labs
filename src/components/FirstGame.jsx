@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FirstGame = () => {
-    const doers = [
+    const gamedata = [
         {
             heading: "World Building",
             para: "Every pixel, every character, every puzzle is a testament to the harmonious marriage of imagination and engineering precision",
@@ -15,11 +15,11 @@ const FirstGame = () => {
             para: "In the realm of game design, art and animation are the storytellers, whispering tales of wonder and excitement, etching memories that linger long after the controller is set down."
         },
     ]
-    const Crdsdata = doers.map((doersdata, i) => (
+    const gamecard = gamedata.map((carddata, i) => (
         <div key={i} className='col-lg-4 '>
             <div className='doers-crd position-relative overflow-hidden  z-1  '>
-                <h4 className=" m-0 text-white roboto-flex fs-lg1 pb-4 pb-97 fw-bold  ">{doersdata.heading}</h4>
-                <p className='text-gray ff-roboto fs-sm fw-normal m-0 max-w-310 '>{doersdata.para}</p>
+                <h4 className=" m-0 text-white roboto-flex fs-lg1 pb-4 pb-97 fw-bold  ">{carddata.heading}</h4>
+                <p className='text-gray ff-roboto fs-sm fw-normal m-0 max-w-310 '>{carddata.para}</p>
             </div>
         </div>
     ))
@@ -40,7 +40,7 @@ const FirstGame = () => {
                     </div>
                 </div>
                 <div className='row pb-131'>
-                    {Crdsdata}
+                    {gamecard}
                 </div>
             </div>
         </div>

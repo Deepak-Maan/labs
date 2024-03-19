@@ -8,6 +8,7 @@ import MakeMove from "./components/MakeMove";
 import Nav from "./components/Nav";
 import Next from "./components/Next";
 import RichWorld from "./components/RichWorld";
+import MyRoadmap from "./components/Roadmap";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <RichWorld />
       <Behind />
       <Next />
+      <MyRoadmap />
       <Contact />
     </div>
   );
