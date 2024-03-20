@@ -78,90 +78,53 @@ const Contactus = () => {
                             <form onSubmit={handelsubmit}>
                                 <div className="d-flex flex-column flex-sm-row align-items-center gap-sm-4 gap-2">
                                     <div className=" d-flex flex-column w-100">
-                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white ">
-                                            Frist Name
-                                        </label>
-                                        <div className="gradia ntfrom">
-                                            <input
-                                                onChange={submission}
-                                                type="name"
-                                                name="name"
-                                                value={Fromdata.name}
-                                                placeholder="Park Seijun"
-                                                className=" input-box text-white opacity-70 w-100  gradient-border-FOCUS "
-                                            />
-                                            {Errordata.name && (
-                                                <p className="text-danger pt-1">{Errordata.name}</p>
-                                            )}
+                                        <label className="fw-medium fs-sm mb-sm-2 mb-1 text-white ">Frist Name </label>
+                                        <div >
+                                            <input onChange={submission} type="name" name="name" value={Fromdata.name} placeholder="Park Seijun" className=" input-box text-white w-100 " />
+                                            {Errordata.name && (<p className="text-danger pt-1">{Errordata.name}</p>)}
                                         </div>
                                     </div>
                                     <div className=" d-flex flex-column w-100">
-                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white  ">
-                                            Last Name
-                                        </label>
-                                        <div className="gradia ntfrom">
-                                            <input
-                                                onChange={submission}
-                                                type="name"
-                                                name="lastname"
-                                                value={Fromdata.lastname}
-                                                placeholder="Sejiun"
-                                                className=" input-box text-white opacity-70  w-100 gradient-border-FOCUS  "
-                                            />
-                                            {Errordata.lastname && (
-                                                <p className="text-danger pt-1">
-                                                    {Errordata.lastname}
-                                                </p>
-                                            )}
+                                        <label className="fw-medium fs-sm mb-sm-2 mb-1 text-white ">Last Name</label>
+                                        <div >
+                                            <input onChange={submission} type="name" name="lastname" value={Fromdata.lastname} placeholder="Sejiun" className=" input-box text-gray w-100  " />
+                                            {Errordata.lastname && (<p className="text-danger pt-1">{Errordata.lastname}</p>)}
                                         </div>
                                     </div>
                                 </div>
                                 <div className="d-flex flex-column flex-sm-row align-items-center gap-sm-4 pt-sm-4 gap-2 pt-2">
                                     <div className=" d-flex flex-column w-100">
-                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white ">Phone Number</label>
-                                        <div className="gradia ntfrom">
-                                            <input onChange={submission} type="number" name="number" value={Fromdata.number} placeholder="+12 5858526478" className=" input-box text-white opacity-70 w-100  gradient-border-FOCUS  " />
+                                        <label className="fw-medium fs-sm  mb-sm-2 mb-1 text-white ">Phone Number</label>
+                                        <div >
+                                            <input onChange={submission} type="number" name="number" value={Fromdata.number} placeholder="+12 5858526478" className=" input-box text-gray  w-100" />
                                             {Errordata.number && (<p className="text-danger pt-1">{Errordata.number}</p>)}
                                         </div>
                                     </div>
                                     <div className=" d-flex flex-column w-100">
-                                        <label className="fw-medium fs-1sm lh-18 mb-sm-2 mb-1 text-white  ">
-                                            Email
-                                        </label>
+                                        <label className="fw-medium fs-sm  mb-sm-2 mb-1 text-white">Email</label>
                                         <div className="gradia ntfrom">
-                                            <input
-                                                onChange={submission}
-                                                type="email"
-                                                name="email"
-                                                value={Fromdata.email}
-                                                placeholder="Park@458@Gmail.com"
-                                                className=" input-box text-white opacity-70 w-100 gradient-border-FOCUS   "
-                                            />
-                                            {Errordata.email && (
-                                                <p className="text-danger pt-1">{Errordata.email}</p>
-                                            )}
+                                            <input onChange={submission} type="email" name="email" value={Fromdata.email} placeholder="Park@458@Gmail.com" className=" input-box text-gray  w-100" />
+                                            {Errordata.email && (<p className="text-danger pt-1">{Errordata.email}</p>)}
                                         </div>
                                     </div>
                                 </div>
                                 <div className=" mb-2 d-flex pt-3 align-items-start gap-3">
                                     <input type="checkbox" id="checkbox" defaultChecked={false} ref={checkboxRef} className='mt-1' />
-                                    <p className=" text-white fw-normal max-w-547 fs-2sm lh-21 mb-0 " >By sending this form I confirm that I have read and acceptthe <span className=" fw-semibold"> Privacy Policy</span></p>
+                                    <p className=" text-white fw-normal max-w-547 fs-md mb-0 " >By sending this form I confirm that I have read and acceptthe <span className=" fw-semibold"> Privacy Policy</span></p>
                                 </div>
-                                {Errordata.checkbox && (
-                                    <p className="text-danger pt-1">{Errordata.checkbox}</p>
-                                )}
+                                {Errordata.checkbox && (<p className="text-danger pt-1">{Errordata.checkbox}</p>)}
                                 <div className="button-border  d-inline-block mt-4">
-                                    <button className="px-32 py-3 border-0 bg-button rounded-pill fs-2sm fw-medium text-white lh-18">Subscribe</button>
+                                    <button className="px-32 py-3 border-0 bg-button rounded-pill fs-sm fw-medium text-white">Subscribe</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div className=' col-lg-4 col-12 mt-4 mt-lg-0'>
                         <div className=' max-w-374 mx-auto'>
-                            <p className=' fw-normal fs-md lh28 text-white mb-0 text-center text-lg-start' data-aos="zoom-in">Stay updated</p>
-                            <p className=' fw-normal fs-1sm lh24 text-white mt-12 mb-4 opacity-70 text-center text-lg-start' data-aos="zoom-in">At 248 Labs, our constant pursuit is to build engaging games that spared joy. Don’t hesitate to reach out to us with your thoughts and messages - we are all ears!</p>
-                            <p className=' fw-normal fs-md lh28 text-white mt-12  mb-0 text-center text-lg-start' data-aos="zoom-in">Address</p>
-                            <p className=' fw-normal fs-1sm lh24 text-white mt-12  mb-0 opacity-70 text-center text-lg-start' data-aos="zoom-in">390 Orchard Road, 03-07, Palais Renaissance.</p>
+                            <p className=' fw-normal fs-lg  text-white mb-0 text-center text-lg-start' data-aos="zoom-in">Stay updated</p>
+                            <p className=' fw-normal fs-sm  text-gray mt-12 mb-4  text-center text-lg-start' data-aos="zoom-in">At 248 Labs, our constant pursuit is to build engaging games that spared joy. Don’t hesitate to reach out to us with your thoughts and messages - we are all ears!</p>
+                            <p className=' fw-normal fs-lg1  text-white mt-12  mb-0 text-center text-lg-start' data-aos="zoom-in">Address</p>
+                            <p className=' fw-normal fs-sm  text-gray mt-12  mb-0  text-center text-lg-start' data-aos="zoom-in">390 Orchard Road, 03-07, Palais Renaissance.</p>
                         </div>
                     </div>
                 </div>

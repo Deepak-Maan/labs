@@ -2,6 +2,7 @@ import "./App.css";
 import Behind from "./components/Behind";
 import Contact from "./components/Contact";
 import FirstGame from "./components/FirstGame";
+import Footer from "./components/Footer";
 import GamingExperience from "./components/GamingExperience";
 import Hero from "./components/Hero";
 import MakeMove from "./components/MakeMove";
@@ -25,6 +26,7 @@ function App() {
       <Next />
       <MyRoadmap />
       <Contact />
+      <Footer />
     </div>
   );
 }
