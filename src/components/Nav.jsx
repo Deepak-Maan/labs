@@ -1,19 +1,38 @@
 import React from 'react'
 import pageLogo from '../assets/images/svg/page-logo.svg'
 import Commonbtn from './Commonbtn'
+import { useState } from 'react'
+import { Navcross, Navline } from './Icons'
 const Nav = () => {
+    const [first, setfirst] = useState(false)
+    function show() {
+        setfirst(!first)
+        if (first === false) {
+            document.body.classList.add('overflow_hidden')
+        }
+        else {
+            document.body.classList.remove('overflow_hidden')
+        }
+    }
+
     return (
         <div>
-            <nav className="container d-flex justify-content-between align-items-center py-4">
-                <a href="#" rel='noreffrer'><img src={pageLogo} alt="pageLogo" /></a>
-                <ul className='d-flex p-0 gap-4 align-items-center mb-0'>
-                    <li><a href="" className=' text-lightwhite fw-normal fs-sm'>About Us</a></li>
-                    <li><a href="" className=' text-lightwhite fw-normal fs-sm'>Our Team</a></li>
-                    <li><a href="" className=' text-lightwhite fw-normal fs-sm'>Roadmap</a></li>
-                    <li><Commonbtn text='Contact Us' custm='py-12 px-32 ms-5' /></li>
-                </ul>
-            </nav>
-        </div>
+            <div className='container py-4'>
+                <div className=' d-flex  align-items-center  justify-content-between '>
+                    <img src={pageLogo} alt="" className=' navimg cursor-pointer' />
+                    <div className="d-flex  align-items-center  mb-0  ps-0 gap-4 " >
+                        <ul className={`${first ? "nav-true" : "nav-false"} d-flex align-items-center mb-0 ps-0 gap-4 mobile-view`}>
+                            <li><a href="#aboutus" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks position-relative '>About Us</a></li>
+                            <li><a href="#team" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks position-relative  '>Our Team</a></li>
+                            <li><a href="#rm" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks  position-relative '>Roadmap</a></li>
+                            <li className=' ps-3 cursor-pointer d-block d-sm-none  d-lg-block'><Commonbtn text='Contact Us' custm='px-32 py-12' /></li>
+                        </ul>
+                        <button className=' ps-3 cursor-pointer d-none d-sm-block d-lg-none bg-transparent border-0 '><Commonbtn text='Contact Us' /></button>
+                    </div>
+                    <span onClick={show} className=' d-block d-lg-none position-relative z-11'>{first === false ? <Navline /> : <Navcross />}</span>
+                </div>
+            </ div>
+        </div >
     )
 }
 

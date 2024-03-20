@@ -25,12 +25,12 @@ const FirstGame = () => {
     ))
     return (
         <div className='pt-121 bg-black mt1 position-relative overflow-hidden z-1  '>
-            <h1 className=' fs-xxl1 fw-bold roboto-flex position-absolute about-h text-white z-n1 '>About Us</h1>
+            <h1 className=' fs-xxl1 fw-bold roboto-flex position-absolute about-h text-white '>About Us</h1>
             <div className='container'>
                 <div className="row pb-114 ">
                     <div className="col-lg-6">
                         <div className=' d-flex mb-3'>
-                            <p className='common-h-btns fw-bold roboto-flex fs-sm1 m-0 cbtn-p'>DOERS OVER TALKERS</p>
+                            <p className='team_btn fw-bold roboto-flex fs-sm1 m-0 cbtn-p'>DOERS OVER TALKERS</p>
                         </div>
                         <h2 className='roboto-flex fw-bold fs-xl1 text-white max-w-310'>Game First.Always.</h2>
                     </div>

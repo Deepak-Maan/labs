@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import behind1 from "../assets/images/png/behind1.png";
 import behind2 from "../assets/images/png/behind2.png";
 import behind3 from "../assets/images/png/behind3.png";
@@ -8,20 +7,15 @@ import behind6 from "../assets/images/png/behind6.png";
 import behind7 from "../assets/images/png/behind7.png";
 import behind8 from "../assets/images/png/behind8.png";
 
-// import AOS from "aos";
-// import "aos/dist/aos.css";
 const mycardinfo = [
     {
-        aos: "fade-right",
         img: behind1,
-
         name: "James Vuong",
         nametwo: "(Co-CEO)",
         para1: "James is a dynamic CEO leading two thriving companies. He co-founded ROOMERANG, elevating it from $0 to $8 million in annual net revenue in just 5 years. Additionally, as a co-founder of KEYNINJA, James achieved an ",
         para2: "impressive 50% year-over-year net revenue growth within the same timeframe. With a background in property valuation, sales, and technology, James brings a unique blend of skills to drive innovation and success in both ventures.",
     },
     {
-        aos: "fade-right",
         img: behind2,
         nametwo: "(Co-CEO)",
         name: "Tricia Yong",
@@ -36,7 +30,6 @@ const mycardinfo = [
         para2: "strategic pricing initiatives for life-saving medications not only gained eligibility onto the government reimbursement list in Singapore, Sri Lanka, and the Maldives but also significantly alleviated the financial burden on patients grappling with the costs of disease..",
     },
     {
-        aos: "fade-left",
         img: behind4,
         nametwo: "(Lorem Ipsum)",
         name: "Ryan Ang",
@@ -75,17 +68,13 @@ const mycardinfo = [
 ];
 
 const Behind = () => {
-    const [first, setfirst] = useState();
-    function index(first) {
-        setfirst(!first);
-    }
     const mycard = mycardinfo.map((mycard) => (
-        <div className={`${index === 1 ? "" : ""} col-lg-6 col-12 `}>
-            <div className="behind_card position-relative mb-4 p-3 overflow-hidden">
+        <div className=" col-lg-6 col-12 my-3">
+            <div className="behind_card position-relative my-3 p-3 overflow-hidden">
                 <div className="d-sm-flex align-items-center">
                     <img className="behind_img" src={mycard.img} alt="card-img" />
                     <div>
-                        <p className=" d-flex align-items-center fw-semibold text-white ms-2">{mycard.name}<span className="fs-sm fw-normal CEO_clr ms-2 ">{mycard.nametwo}</span></p>
+                        <p className=" d-flex align-items-center fw-semibold text-white ms-2">{mycard.name}<span className="fs-sm fw-normal text-gradient ms-2 ">{mycard.nametwo}</span></p>
                         <p className="fs-sm fw-normal  text-gray ms-2">{mycard.para1}</p>
                     </div>
                 </div>
@@ -95,9 +84,9 @@ const Behind = () => {
         </div>
     ));
     return (
-        <div className="bg-black mt_2">
-            <p className="fs-xxl1 text-white fw-bold">Our Team</p>
-            <div className="container pt-2 ">
+        <div className="bg-black position-relative pt-5 mt-5">
+            <p className="fs-xxl1 text-white op-6 fw-bold our-team">Our Team</p>
+            <div className="container pt-2 mt-5">
                 <div className="d-flex align-items-center justify-content-center">
                     <button className="team_btn ">OUR TEAM</button>
                 </div>

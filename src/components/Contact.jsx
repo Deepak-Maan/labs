@@ -70,11 +70,11 @@ const Contactus = () => {
     }
     return (
         <div className='form-bg ' id="aboutus">
-            <div className='container'>
-                <div className=' align-items-center row'>
+            <div className='container pt-5'>
+                <div className=' align-items-center row mt-5'>
                     <div className=' col-12 col-lg-7'>
                         <div className=' foam_box' data-aos="zoom-in">
-                            <p className=' fw-bold fs-1lg lh62 text-white mb-sm-4 mb-3'>Get updated with us</p>
+                            <p className=' fw-bold fs-xl1 text-white mb-sm-4 mb-3'>Get updated with us</p>
                             <form onSubmit={handelsubmit}>
                                 <div className="d-flex flex-column flex-sm-row align-items-center gap-sm-4 gap-2">
                                     <div className=" d-flex flex-column w-100">
