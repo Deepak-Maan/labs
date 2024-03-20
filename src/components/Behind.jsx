@@ -74,7 +74,7 @@ const Behind = () => {
                 <div className="d-sm-flex align-items-center">
                     <img className="behind_img" src={mycard.img} alt="card-img" />
                     <div>
-                        <p className=" d-flex align-items-center fw-semibold text-white ms-2">{mycard.name}<span className="fs-sm fw-normal text-gradient ms-2 ">{mycard.nametwo}</span></p>
+                        <p className=" d-flex align-items-center fs-lg fw-semibold text-white ms-2">{mycard.name}<span className="fs-sm fw-normal text-gradient ms-2 ">{mycard.nametwo}</span></p>
                         <p className="fs-sm fw-normal  text-gray ms-2">{mycard.para1}</p>
                     </div>
                 </div>

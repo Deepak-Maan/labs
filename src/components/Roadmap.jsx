@@ -19,35 +19,35 @@ const MyRoadmap = () => {
                         <div className="container right">
                             <div className="content position-relative overflow-hidden ">
                                 <h2 className="fs-lg1 fw-normal text-gradient text-center">Oct 2014</h2>
-                                <p className="fs-lg1 fw-normal text-white text-center">Hired our first employee</p>
+                                <p className="fs-lg1 fw-normal text-gray text-center">Hired our first employee</p>
                                 <span className="timeline-ellipse"></span>
                             </div>
                         </div>
                         <div className="container left  ">
                             <div className="content position-relative overflow-hidden">
                                 <h2 className="fs-lg1 fw-normal text-gradient  text-center">Nov 2014</h2>
-                                <p className="fs-lg1  fw-normal text-white text-center">Launched Bitcoin wallet</p>
+                                <p className="fs-lg1  fw-normal text-gray text-center">Launched Bitcoin wallet</p>
                                 <span className="timeline-ellipse"></span>
                             </div>
                         </div>
                         <div className="container right ">
                             <div className="content position-relative overflow-hidden">
                                 <h2 className="fs-lg1 fw-normal text-gradient text-center"> Oct 2015</h2>
-                                <p className="fs-lg1  fw-normal text-white text-center">1st prize by Bit angels at Coin Agenda, Las Vegas</p>
+                                <p className="fs-lg1  fw-normal text-gray text-center">1st prize by Bit angels at Coin Agenda, Las Vegas</p>
                                 <span className="timeline-ellipse"></span>
                             </div>
                         </div>
                         <div className="container left ">
                             <div className="content position-relative overflow-hidden">
                                 <h2 className="fs-lg1 fw-normal text-gradient text-center">Jan 2020</h2>
-                                <p className="fs-lg1 fw-normal text-white text-center d-flex align-items-center justify-content-center">launch On <img className="px-3" src={India} alt="India" /> <img className="pe-3" src={England} alt='England' /> <img className="pe-3" src={America} alt='America' /></p>
+                                <p className="fs-lg1 fw-normal text-gray text-center d-flex align-items-center justify-content-center">launch On <img className="px-3" src={India} alt="India" /> <img className="pe-3" src={England} alt='England' /> <img className="pe-3" src={America} alt='America' /></p>
                                 <span className="timeline-ellipse"></span>
                             </div>
                         </div>
                         <div className="container right ">
                             <div className="content position-relative overflow-hidden">
                                 <h2 className="fs-lg1 fw-normal text-gradient text-center">Jan 2022</h2>
-                                <p className="fs-lg1 fw-normal text-white text-center">
+                                <p className="fs-lg1 fw-normal text-gray text-center">
                                     Trusted by 10 Millions+ Users
                                 </p>
                                 <span className="timeline-ellipse"></span>
