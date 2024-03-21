@@ -40,7 +40,7 @@ const FirstGame = () => {
                     </div>
                 </div>
                 <div className='row pb-sm-5 mb-5'>
-                    <div className='mb-sm-5'>{gamecard}</div>
+                    {gamecard}
                 </div>
             </div>
         </div>

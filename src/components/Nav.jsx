@@ -19,12 +19,12 @@ const Nav = () => {
         <div>
             <div className='container py-4'>
                 <div className=' d-flex  align-items-center  justify-content-between '>
-                    <img src={pageLogo} alt="" className=' navimg cursor-pointer' />
+                    <a href=""><img src={pageLogo} alt="page-logo" /></a>
                     <div className="d-flex  align-items-center  mb-0  ps-0 gap-4 " >
                         <ul className={`${first ? "nav-true" : "nav-false"} d-flex align-items-center mb-0 ps-0 gap-4 mobile-view`}>
                             <li><a href="#aboutus" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks position-relative '>About Us</a></li>
                             <li><a href="#team" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks position-relative  '>Our Team</a></li>
-                            <li><a href="#rm" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks  position-relative '>Roadmap</a></li>
+                            <li><a href="#roadmap" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks  position-relative '>Roadmap</a></li>
                             <li className=' ps-3 cursor-pointer d-block d-sm-none  d-lg-block'><Commonbtn text='Contact Us' custm='px-32 py-12' /></li>
                         </ul>
                         <button className=' ps-3 cursor-pointer d-none d-sm-block d-lg-none bg-transparent border-0 '><Commonbtn text='Contact Us' /></button>

@@ -65,6 +65,30 @@
 
 .bg-button {
   background: linear-gradient(151.6deg, #D4145A 1.85%, #FBB03B 98.12%);
+  transition: .4s;
+  outline: 1px solid transparent;
+}
+
+.bg-button:hover {
+  background: transparent;
+
+  outline: 1px solid white;
+}
+
+.pagelinks {
+  transition: .4s;
+}
+
+.pagelinks:hover {
+  color: white;
+}
+
+.social-icons {
+  transition: .4s;
+}
+
+.social-icons:hover {
+  transform: translateY(-4px);
 }
 
 * {
