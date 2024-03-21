@@ -69,9 +69,9 @@ const Contactus = () => {
         document.body.classList.remove('overflow-hidden')
     }
     return (
-        <div className='form-bg ' id="aboutus">
-            <div className='container pt-5'>
-                <div className=' align-items-center row mt-5'>
+        <div className='form-bg pt-sm-5 mt-5' id="aboutus">
+            <div className='container pt-sm-5'>
+                <div className=' align-items-center row mt-sm-5'>
                     <div className=' col-12 col-lg-7'>
                         <div className=' foam_box' data-aos="zoom-in">
                             <p className=' fw-bold fs-xl1 text-white mb-sm-4 mb-3'>Get updated with us</p>

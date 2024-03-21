@@ -6,10 +6,10 @@ import America from "../assets/images/svg/America.svg"
 const MyRoadmap = () => {
     return (
         <div>
-            <div id="roadmap" className=" overflow-x-clip position-relative mt-5 mb-5 pb-5">
-                <div className="roadmap-b-layer"></div>
+            <div id="roadmap" className=" overflow-x-clip position-relative mt-5 mb-sm-5 pb-sm-5">
+                {/* <div className="roadmap-b-layer"></div> */}
                 <p className="fs-xxl1 roadmap text-gray fw-bold">ROADMAP</p>
-                <div className="container pt-2 mt-5 pb-5">
+                <div className="container pt-2 mt-5 pb-sm-5">
                     <div className="d-flex align-items-center justify-content-center">
                         <button className="team_btn ">ROAD MAP</button>
                     </div>
