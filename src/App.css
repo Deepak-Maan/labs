@@ -91,6 +91,45 @@
   transform: translateY(-4px);
 }
 
+.footer-ellipse1 {
+  background-color: #AD1AAF;
+  height: 496px;
+  width: 206px;
+  border-radius: 50%;
+  display: flex;
+  opacity: 75%;
+  filter: blur(130px);
+  position: absolute;
+  bottom: -70%;
+  left: 0;
+}
+
+.roadmap-ellipse1 {
+  background-color: #AD1AAF;
+  height: 496px;
+  width: 206px;
+  border-radius: 50%;
+  display: flex;
+  opacity: 75%;
+  filter: blur(130px);
+  position: absolute;
+  top: 10%;
+  left: 0;
+}
+
+.footer-ellipse2 {
+  background: linear-gradient(151.6deg, #D4145A 1.85%, #FBB03B 98.12%);
+  height: 496px;
+  width: 206px;
+  border-radius: 50%;
+  display: flex;
+  opacity: 75%;
+  filter: blur(130px);
+  position: absolute;
+  bottom: -70%;
+  right: 0;
+}
+
 * {
   margin: 0;
   padding: 0;

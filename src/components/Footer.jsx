@@ -4,7 +4,9 @@ import { Facebook, Instagram, Linkedin, Twitter } from "./Icons";
 
 const Footer = () => {
     return (
-        <div className="pt-sm-5 mt-sm-5">
+        <div className="pt-sm-5 mt-sm-5 overflow-hidden position-relative">
+            <div className="footer-ellipse1 d-none d-lg-flex"></div>
+            <div className="footer-ellipse2 d-none d-lg-flex"></div>
             <div className=" container pt-sm-5 mt-5">
                 <div className="text-center pb-3">
                     <a href=""><img src={footerlogo} alt="footerlogo" /></a>

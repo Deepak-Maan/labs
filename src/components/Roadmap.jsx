@@ -7,7 +7,8 @@ const MyRoadmap = () => {
     return (
         <div>
             <div id="roadmap" className=" overflow-x-clip position-relative mt-5 mb-sm-5 pb-sm-5">
-                {/* <div className="roadmap-b-layer"></div> */}
+                <div className="roadmap-ellipse1 d-none d-lg-flex"></div>
+                <div className="roadmap-b-layer"></div>
                 <p className="fs-xxl1 roadmap text-gray fw-bold">ROADMAP</p>
                 <div className="container pt-2 mt-5 pb-sm-5">
                     <div className="d-flex align-items-center justify-content-center">
