@@ -145,7 +145,7 @@
 
 /* heights */
 .h-header {
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .next-height {
@@ -606,6 +606,10 @@ input[type="checkbox" i] {
     z-index: 5;
     height: 100px;
     width: 100px;
+  }
+
+  .h-header {
+    min-height: 100vh;
   }
 
   .timeline {

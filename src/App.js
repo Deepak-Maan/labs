@@ -1,5 +1,6 @@
 import "./App.css";
 import Behind from "./components/Behind";
+import Companies from "./components/Companies";
 import Contact from "./components/Contact";
 import FirstGame from "./components/FirstGame";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function App() {
         <Nav />
         <Hero />
       </div>
+      <Companies />
       <FirstGame />
       <GamingExperience />
       <MakeMove />

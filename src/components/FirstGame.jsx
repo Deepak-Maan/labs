@@ -17,30 +17,30 @@ const FirstGame = () => {
     ]
     const gamecard = gamedata.map((carddata, i) => (
         <div key={i} className='col-lg-4 '>
-            <div className='doers-crd position-relative overflow-hidden  z-1  '>
+            <div className='doers-crd position-relative overflow-hidden  z-1 mb-5 mb-sm-0 '>
                 <h4 className=" m-0 text-white fs-xl pb-4  fw-bold  ">{carddata.heading}</h4>
                 <p className='text-gray fs-sm fw-normal m-0 max-w-310 '>{carddata.para}</p>
             </div>
         </div>
     ))
     return (
-        <div className='pt-121 bg-black mt1 position-relative overflow-hidden z-1  '>
+        <div className='pt-121 position-relative overflow-hidden z-1  '>
             <h1 className=' fs-xxl1 fw-bold  position-absolute about-h text-white '>About Us</h1>
-            <div className='container'>
-                <div className="row pb-114 ">
+            <div className='container pb-sm-4'>
+                <div className="row pb-sm-5 mb-5 ">
                     <div className="col-lg-6">
                         <div className=' d-flex mb-3'>
-                            <p className='team_btn fw-bold fs-sm m-0 cbtn-p'>DOERS OVER TALKERS</p>
+                            <p className='team_btn fw-bold fs-sm m-0 '>DOERS OVER TALKERS</p>
                         </div>
                         <h2 className=' fw-bold fs-xl1 text-white max-w-310'>Game First.Always.</h2>
                     </div>
-                    <div className='col-lg-6 pt-50 ps-lg-5 ps-3'>
-                        <h4 className='roboto-flex fw-medium fs-md text-white m-0 mb-2 pb-1'>This is difficult</h4>
+                    <div className='col-lg-6 pt-sm-5 pt-3 ps-lg-5 ps-3'>
+                        <h4 className=' fw-medium fs-md text-white m-0 mb-2 pb-1'>This is difficult</h4>
                         <p className=' m-0 fs-sm text-gray fw-normal max-w-512'>Web3 Games have a notoriously high barrier-to-entry for casual gamers who make up the vast majority of players. “Link your wallet” before gameplay is not just off-putting, it’s boring. We’re solving that with <span className=' fw-semibold '>world-class storytelling,</span> world-building, game design, art and sound. And fun.</p>
                     </div>
                 </div>
-                <div className='row pb-131'>
-                    {gamecard}
+                <div className='row pb-sm-5 mb-5'>
+                    <div className='mb-sm-5'>{gamecard}</div>
                 </div>
             </div>
         </div>
