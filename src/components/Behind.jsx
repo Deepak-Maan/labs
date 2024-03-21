@@ -84,7 +84,9 @@ const Behind = () => {
         </div>
     ));
     return (
-        <div className="bg-black position-relative pt-sm-5 mt-sm-5">
+        <div className=" position-relative overflow-x-clip pt-sm-5 mt-sm-5">
+            <div className="behind-ellipse1 d-none d-lg-flex"></div>
+            <div className="behind-ellipse2 d-none d-lg-flex"></div>
             <p className="fs-xxl1 text-white op-6 fw-bold our-team">Our Team</p>
             <div className="container pt-2 mt-5">
                 <div className="d-flex align-items-center justify-content-center">

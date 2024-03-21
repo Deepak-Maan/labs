@@ -6,7 +6,7 @@ import Greython from '../assets/images/png/greythoren-img.png'
 const Companies = () => {
     return (
         <div>
-            <div className="container overflow-x-clip">
+            <div className="container overflow-x-clip pb-sm-5 mb-sm-5">
                 <marquee>
                     <span className='d-flex align-items-end justify-content-center gap-5'>
                         <span><img src={Aradicous} alt="company-logo" /></span>

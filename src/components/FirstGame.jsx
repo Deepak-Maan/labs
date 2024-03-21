@@ -24,7 +24,8 @@ const FirstGame = () => {
         </div>
     ))
     return (
-        <div className='pt-121 position-relative overflow-hidden z-1  '>
+        <div className='pt-121 position-relative overflow-x-clip z-1  '>
+            <div className="firstgame-ellipse d-none d-lg-flex"></div>
             <h1 className=' fs-xxl1 fw-bold  position-absolute about-h text-white '>About Us</h1>
             <div className='container pb-sm-4'>
                 <div className="row pb-sm-5 mb-5 ">

@@ -3,9 +3,10 @@ import MoveImg from '../assets/images/png/makemove-img.png'
 import Commonbtn from './Commonbtn'
 const MakeMove = () => {
     return (
-        <div className='pt-sm-5'>
-            <div className='container d-flex flex-column align-items-center pt-5'>
-                <img className='w-100' src={MoveImg} alt="moveimg" />
+        <div className='pt-sm-5 overflow-x-clip'>
+            <div className='container position-relative d-flex flex-column align-items-center mt-sm-5 pt-5'>
+                <div className="makemove-ellipse d-none d-lg-flex"></div>
+                <img className='w-100 position-relative z-3' src={MoveImg} alt="moveimg" />
                 <div className="row w-100 pt-4">
                     <div className="col-lg-4 order-2 order-lg-1 d-block">
                         <Commonbtn text='name@domain.com' custm='dominbtn py-3 px-32 mb-3' />
