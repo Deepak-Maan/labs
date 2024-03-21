@@ -84,14 +84,14 @@ const Behind = () => {
         </div>
     ));
     return (
-        <div className="bg-black position-relative pt-5 mt-5">
+        <div className="bg-black position-relative pt-sm-5 mt-sm-5">
             <p className="fs-xxl1 text-white op-6 fw-bold our-team">Our Team</p>
             <div className="container pt-2 mt-5">
                 <div className="d-flex align-items-center justify-content-center">
-                    <button className="team_btn ">OUR TEAM</button>
+                    <button className="team_btn mb-3">OUR TEAM</button>
                 </div>
                 <h1 className="fs-xl1 fw-bold text-white text-center mx-auto"> Behind our expertise</h1>
-                <div className="row pt-5">{mycard}</div>
+                <div className="row pt-sm-5">{mycard}</div>
             </div>
         </div>
     );

@@ -4,8 +4,8 @@ import { Video } from './Icons'
 const RichWorld = () => {
     return (
         <div>
-            <div className="container py-5">
-                <h2 className='text-white fw-bold fs-xl1 text-center pb-4 pt-5 mt-5'>A rich, inhabited, and licensable world.</h2>
+            <div className="container py-sm-5">
+                <h2 className='text-white fw-bold fs-xl1 text-center pb-4 pt-sm-5 mt-5'>A rich, inhabited, and licensable world.</h2>
                 <div className="position-relative mt-3"><img className='w-100' src={RichWorldImg} alt="richWorld" />
                     <span className='rich-video'>
                         <Video />

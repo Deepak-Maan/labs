@@ -149,7 +149,7 @@
 }
 
 .next-height {
-  min-height: 680px
+  min-height: 500px
 }
 
 /* spaces */
@@ -532,7 +532,7 @@ input[type="checkbox" i] {
 /* roadmap */
 .time_logo {
   top: -3%;
-  left: -5%;
+  left: -12%;
   z-index: 5;
   height: 70px;
   width: 70px;
@@ -598,6 +598,14 @@ input[type="checkbox" i] {
     --fs-xxl: 60px;
     --fs-xxl1: 70px;
   }
+
+  .time_logo {
+    top: -3%;
+    left: -5%;
+    z-index: 5;
+    height: 70px;
+    width: 70px;
+  }
 }
 
 @media (min-width: 750px) {
@@ -610,6 +618,10 @@ input[type="checkbox" i] {
 
   .h-header {
     min-height: 100vh;
+  }
+
+  .next-height {
+    min-height: 680px
   }
 
   .timeline {
