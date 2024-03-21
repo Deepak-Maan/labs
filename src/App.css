@@ -134,7 +134,7 @@
   background-image: url('./assets/images/png/gaming-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 756px;
+  min-height: 500px;
 }
 
 .next-bg {
@@ -616,6 +616,13 @@ input[type="checkbox" i] {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .gaming {
+    background-image: url('./assets/images/png/gaming-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 756px;
   }
 
   .timeline::after {

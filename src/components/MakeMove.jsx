@@ -3,7 +3,7 @@ import MoveImg from '../assets/images/png/makemove-img.png'
 import Commonbtn from './Commonbtn'
 const MakeMove = () => {
     return (
-        <div className='pt-5'>
+        <div className='pt-sm-5'>
             <div className='container d-flex flex-column align-items-center pt-5'>
                 <img className='w-100' src={MoveImg} alt="moveimg" />
                 <div className="row w-100 pt-4">
