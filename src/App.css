@@ -195,14 +195,17 @@
   right: -10%;
 }
 
-/* prelader */
-.loader {
-  /* position: absolute; */
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-
+#Top {
+  width: 50px;
+  height: 50px;
+  display: none;
+  z-index: 5;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
 }
+
+/* prelader */
 
 .square {
   background: white;

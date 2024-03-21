@@ -13,6 +13,7 @@ import Next from "./components/Next";
 import Preloader from "./components/Preloader";
 import RichWorld from "./components/RichWorld";
 import MyRoadmap from "./components/Roadmap";
+import Backtotop from "./components/BackToTop";
 
 function App() {
   const [data, setdata] = useState(true);
@@ -44,6 +45,7 @@ function App() {
           <MyRoadmap />
           <Contact />
           <Footer />
+          <Backtotop />
         </>
       )}
     </>
