@@ -27,7 +27,7 @@ const Nav = () => {
                             <li><a href="#roadmap" onClick={show} className=' text-lightwhite fw-normal fs-sm pagelinks  position-relative '>Roadmap</a></li>
                             <li className=' ps-3 cursor-pointer d-block d-sm-none  d-lg-block'><Commonbtn text='Contact Us' custm='px-32 py-12' /></li>
                         </ul>
-                        <button className=' ps-3 cursor-pointer d-none d-sm-block d-lg-none bg-transparent border-0 '><Commonbtn text='Contact Us' /></button>
+                        <button className=' ps-3 cursor-pointer d-none d-sm-block d-lg-none bg-transparent border-0 '><Commonbtn text='Contact Us' custm='px-32 py-12' /></button>
                     </div>
                     <span onClick={show} className=' d-block d-lg-none position-relative z-11'>{first === false ? <Navline /> : <Navcross />}</span>
                 </div>
