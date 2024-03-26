@@ -469,6 +469,12 @@
   opacity: 1;
 }
 
+.hero-triangle {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+}
+
 /* cards */
 .gaming-card {
   max-width: 571px;
