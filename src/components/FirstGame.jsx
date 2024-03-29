@@ -16,7 +16,7 @@ const FirstGame = () => {
         },
     ]
     const gamecard = gamedata.map((carddata, i) => (
-        <div key={i} className='col-lg-4 mb-4 mb-lg-0'>
+        <div key={i} className='col-lg-4 mb-5 mb-lg-0'>
             <div className='doers-crd position-relative overflow-hidden  z-1'>
                 <h4 className=" m-0 text-white fs-xl pb-4  fw-bold  ">{carddata.heading}</h4>
                 <p className='text-gray fs-sm fw-normal m-0 max-w-310 '>{carddata.para}</p>
