@@ -355,7 +355,7 @@
   background-image: url('./assets/images/png/gaming-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 500px;
+  min-height: 400px;
 }
 
 .next-bg {
